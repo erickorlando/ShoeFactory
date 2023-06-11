@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using ShoeFactory.WinApp.Maestros;
 
 namespace ShoeFactory.WinApp
 {
@@ -15,6 +7,22 @@ namespace ShoeFactory.WinApp
         public MainForm()
         {
             InitializeComponent();
+        }
+
+        private void cuerosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (var frm = new FrmCrudCueros())
+            {
+                frm.ShowDialog();
+            }
+        }
+
+        private void monedasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            using (var frm = new FrmCrudCurrencies())
+            {
+                frm.ShowDialog();
+            }
         }
     }
 }

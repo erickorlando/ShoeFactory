@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             menuStrip1 = new MenuStrip();
             datosMaestrosToolStripMenuItem = new ToolStripMenuItem();
             tiposDeMovimientoToolStripMenuItem = new ToolStripMenuItem();
@@ -45,7 +46,9 @@
             mostrarAyudaToolStripMenuItem = new ToolStripMenuItem();
             toolStripMenuItem1 = new ToolStripSeparator();
             acercaDeToolStripMenuItem = new ToolStripMenuItem();
+            pictureBox1 = new PictureBox();
             menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // menuStrip1
@@ -53,7 +56,8 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { datosMaestrosToolStripMenuItem, procesosToolStripMenuItem, ayudaToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 24);
+            menuStrip1.Padding = new Padding(5, 2, 0, 2);
+            menuStrip1.Size = new Size(783, 24);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -75,12 +79,14 @@
             cuerosToolStripMenuItem.Name = "cuerosToolStripMenuItem";
             cuerosToolStripMenuItem.Size = new Size(186, 22);
             cuerosToolStripMenuItem.Text = "Cueros";
+            cuerosToolStripMenuItem.Click += cuerosToolStripMenuItem_Click;
             // 
             // monedasToolStripMenuItem
             // 
             monedasToolStripMenuItem.Name = "monedasToolStripMenuItem";
             monedasToolStripMenuItem.Size = new Size(186, 22);
             monedasToolStripMenuItem.Text = "Monedas";
+            monedasToolStripMenuItem.Click += monedasToolStripMenuItem_Click;
             // 
             // modelosToolStripMenuItem
             // 
@@ -141,26 +147,39 @@
             // mostrarAyudaToolStripMenuItem
             // 
             mostrarAyudaToolStripMenuItem.Name = "mostrarAyudaToolStripMenuItem";
-            mostrarAyudaToolStripMenuItem.Size = new Size(180, 22);
+            mostrarAyudaToolStripMenuItem.Size = new Size(152, 22);
             mostrarAyudaToolStripMenuItem.Text = "Mostrar Ayuda";
             // 
             // toolStripMenuItem1
             // 
             toolStripMenuItem1.Name = "toolStripMenuItem1";
-            toolStripMenuItem1.Size = new Size(177, 6);
+            toolStripMenuItem1.Size = new Size(149, 6);
             // 
             // acercaDeToolStripMenuItem
             // 
             acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
-            acercaDeToolStripMenuItem.Size = new Size(180, 22);
+            acercaDeToolStripMenuItem.Size = new Size(152, 22);
             acercaDeToolStripMenuItem.Text = "Acerca de ...";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Dock = DockStyle.Fill;
+            pictureBox1.Image = Properties.Resources.backgroundrealistic;
+            pictureBox1.Location = new Point(0, 24);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(783, 497);
+            pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox1.TabIndex = 1;
+            pictureBox1.TabStop = false;
             // 
             // MainForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(6F, 13F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(783, 521);
+            Controls.Add(pictureBox1);
             Controls.Add(menuStrip1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
             Name = "MainForm";
             StartPosition = FormStartPosition.CenterScreen;
@@ -168,6 +187,7 @@
             WindowState = FormWindowState.Maximized;
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -191,5 +211,6 @@
         private ToolStripMenuItem mostrarAyudaToolStripMenuItem;
         private ToolStripSeparator toolStripMenuItem1;
         private ToolStripMenuItem acercaDeToolStripMenuItem;
+        private PictureBox pictureBox1;
     }
 }
