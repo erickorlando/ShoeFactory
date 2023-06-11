@@ -15,6 +15,7 @@ public static class DependencyInjection
 
     public static IServiceCollection AddServices(this IServiceCollection services)
     {
-        return services.AddTransient<ITableTypeService, TableTypeService>();
+        return services;
+        //return services.AddTransient<ITableTypeService, TableTypeService>();
     }
 }
