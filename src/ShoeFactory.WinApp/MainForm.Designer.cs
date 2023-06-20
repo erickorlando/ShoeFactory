@@ -57,7 +57,7 @@
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(5, 2, 0, 2);
-            menuStrip1.Size = new Size(783, 24);
+            menuStrip1.Size = new Size(840, 24);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -164,10 +164,10 @@
             // pictureBox1
             // 
             pictureBox1.Dock = DockStyle.Fill;
-            pictureBox1.Image = Properties.Resources.backgroundrealistic;
+            pictureBox1.Image = Properties.Resources.background;
             pictureBox1.Location = new Point(0, 24);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(783, 497);
+            pictureBox1.Size = new Size(840, 561);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
@@ -176,7 +176,7 @@
             // 
             AutoScaleDimensions = new SizeF(6F, 13F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(783, 521);
+            ClientSize = new Size(840, 585);
             Controls.Add(pictureBox1);
             Controls.Add(menuStrip1);
             Icon = (Icon)resources.GetObject("$this.Icon");
