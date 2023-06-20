@@ -1,20 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace ShoeFactory.WinPart
+﻿namespace ShoeFactory.WinPart
 {
     public partial class PlantillaBase : Form
     {
         public PlantillaBase()
         {
             InitializeComponent();
+        }
+
+        protected void ShowWaitCursor(bool wait)
+        {
+            Cursor.Current = wait ? Cursors.WaitCursor : Cursors.Default;
         }
     }
 }

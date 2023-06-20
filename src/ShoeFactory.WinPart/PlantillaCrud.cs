@@ -16,5 +16,30 @@ namespace ShoeFactory.WinPart
         {
             InitializeComponent();
         }
+
+        public virtual void Nuevo()
+        {
+
+        }
+
+        public virtual void Editar()
+        {
+
+        }
+
+        public virtual void Eliminar()
+        {
+
+        }
+
+        public virtual void Guardar()
+        {
+
+        }
+
+        public virtual void Cancelar()
+        {
+
+        }
     }
 }
