@@ -1,16 +1,16 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ShoeFactory.Dto.Request;
 using ShoeFactory.Infraestructure.Interfaces;
-
 namespace ShoeFactory.BackendApi.Controllers;
+
 
 [ApiController]
 [Route("api/[controller]")]
-public class CategoriesController : ControllerBase
+public class PaymentTypesController : ControllerBase
 {
-    private readonly ICategoryService _service;
+    private readonly IPaymentTypeService _service;
 
-    public CategoriesController(ICategoryService service)
+    public PaymentTypesController(IPaymentTypeService service)
     {
         _service = service;
     }

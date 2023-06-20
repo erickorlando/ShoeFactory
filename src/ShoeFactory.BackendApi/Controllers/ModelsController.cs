@@ -6,11 +6,11 @@ namespace ShoeFactory.BackendApi.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class CategoriesController : ControllerBase
+public class ModelsController : ControllerBase
 {
-    private readonly ICategoryService _service;
+    private readonly IModelService _service;
 
-    public CategoriesController(ICategoryService service)
+    public ModelsController(IModelService service)
     {
         _service = service;
     }

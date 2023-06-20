@@ -4,13 +4,14 @@ using ShoeFactory.Infraestructure.Interfaces;
 
 namespace ShoeFactory.BackendApi.Controllers;
 
+
 [ApiController]
 [Route("api/[controller]")]
-public class CategoriesController : ControllerBase
+public class CurrenciesController : ControllerBase
 {
-    private readonly ICategoryService _service;
+    private readonly ICurrencyService _service;
 
-    public CategoriesController(ICategoryService service)
+    public CurrenciesController(ICurrencyService service)
     {
         _service = service;
     }

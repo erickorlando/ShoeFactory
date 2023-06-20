@@ -4,13 +4,14 @@ using ShoeFactory.Infraestructure.Interfaces;
 
 namespace ShoeFactory.BackendApi.Controllers;
 
+
 [ApiController]
 [Route("api/[controller]")]
-public class CategoriesController : ControllerBase
+public class LeathersController : ControllerBase
 {
-    private readonly ICategoryService _service;
+    private readonly ILeatherService _service;
 
-    public CategoriesController(ICategoryService service)
+    public LeathersController(ILeatherService service)
     {
         _service = service;
     }

@@ -9,10 +9,25 @@ public class TableTypeProfile : Profile
 {
     public TableTypeProfile()
     {
-        CreateMap<Category, TableTypeDtoResponse>()
-            .ForMember(d => d.Codigo, o => o.MapFrom(_ => _.Code))
-            .ForMember(d => d.Descripcion, o => o.MapFrom(_ => _.Description));
+        CreateMap<Category, TableTypeDtoResponse>().AddTableTypeDto();
+        CreateMap<TableTypeDtoRequest, Category>().FromTableTypeDto();
 
-        CreateMap<TableTypeDtoRequest, Category>();
+        CreateMap<Currency, TableTypeDtoResponse>().AddTableTypeDto();
+        CreateMap<TableTypeDtoRequest, Currency>().FromTableTypeDto();
+
+        CreateMap<Leather, TableTypeDtoResponse>().AddTableTypeDto();
+        CreateMap<TableTypeDtoRequest, Leather>().FromTableTypeDto();
+        
+        CreateMap<Model, TableTypeDtoResponse>().AddTableTypeDto();
+        CreateMap<TableTypeDtoRequest, Model>().FromTableTypeDto();
+        
+        CreateMap<Movement, TableTypeDtoResponse>().AddTableTypeDto();
+        CreateMap<TableTypeDtoRequest, Movement>().FromTableTypeDto();
+        
+        CreateMap<PaymentType, TableTypeDtoResponse>().AddTableTypeDto();
+        CreateMap<TableTypeDtoRequest, PaymentType>().FromTableTypeDto();
+        
+        CreateMap<SectionCode, TableTypeDtoResponse>().AddTableTypeDto();
+        CreateMap<TableTypeDtoRequest, SectionCode>().FromTableTypeDto();
     }
 }
