@@ -32,7 +32,7 @@ public class ApiHelper
 
         return result!.Data!;
     }
-    
+
     public async Task<ICollection<TableTypeDtoResponse>> List(string endpoint, string filter)
     {
         var response = await _httpClient.GetAsync($"api/{endpoint}?filter={filter}");
@@ -59,31 +59,46 @@ public class ApiHelper
         return result!.Data!;
     }
 
-    public async Task<BaseResponse> Add(string endpoint, TableTypeDtoRequest dto)
+    public BaseResponse Add(string endpoint, TableTypeDtoRequest dto)
     {
-        var json = JsonConvert.SerializeObject(dto);
-        var data = new StringContent(json, Encoding.UTF8, "application/json");
-        var response = await _httpClient.PostAsync($"api/{endpoint}", data);
-        if (response.IsSuccessStatusCode == false)
+        string content = null!;
+        var task = Task.Run(async () =>
         {
-            throw new Exception(response.ReasonPhrase);
-        }
-        var content = await response.Content.ReadAsStringAsync();
+
+            var json = JsonConvert.SerializeObject(dto);
+            var data = new StringContent(json, Encoding.UTF8, "application/json");
+            var response = await _httpClient.PostAsync($"api/{endpoint}", data);
+            if (response.IsSuccessStatusCode == false)
+            {
+                throw new Exception(response.ReasonPhrase);
+            }
+
+            content = await response.Content.ReadAsStringAsync();
+        });
+
+        task.Wait();
+
         var result = JsonConvert.DeserializeObject<BaseResponse>(content);
 
         return result!;
     }
 
-    public async Task<BaseResponse> Update(string endpoint, int id, TableTypeDtoRequest dto)
+    public BaseResponse Update(string endpoint, int id, TableTypeDtoRequest dto)
     {
-        var json = JsonConvert.SerializeObject(dto);
-        var data = new StringContent(json, Encoding.UTF8, "application/json");
-        var response = await _httpClient.PutAsync($"api/{endpoint}/{id}", data);
-        if (response.IsSuccessStatusCode == false)
+        string content = null!;
+
+        var task = Task.Run(async () =>
         {
-            throw new Exception(response.ReasonPhrase);
-        }
-        var content = await response.Content.ReadAsStringAsync();
+            var json = JsonConvert.SerializeObject(dto);
+            var data = new StringContent(json, Encoding.UTF8, "application/json");
+            var response = await _httpClient.PutAsync($"api/{endpoint}/{id}", data);
+            if (response.IsSuccessStatusCode == false)
+            {
+                throw new Exception(response.ReasonPhrase);
+            }
+            content = await response.Content.ReadAsStringAsync();
+        });
+        task.Wait();
         var result = JsonConvert.DeserializeObject<BaseResponse>(content);
 
         return result!;

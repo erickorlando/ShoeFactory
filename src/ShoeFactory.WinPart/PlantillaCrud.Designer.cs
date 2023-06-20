@@ -29,72 +29,72 @@
         private void InitializeComponent()
         {
             toolStrip1 = new ToolStrip();
-            toolStripButton1 = new ToolStripButton();
-            toolStripButton2 = new ToolStripButton();
-            toolStripButton3 = new ToolStripButton();
-            toolStripButton4 = new ToolStripButton();
-            toolStripButton5 = new ToolStripButton();
-            toolStripButton6 = new ToolStripButton();
+            toolNuevo = new ToolStripButton();
+            toolEditar = new ToolStripButton();
+            toolGrabar = new ToolStripButton();
+            toolCancelar = new ToolStripButton();
+            toolEliminar = new ToolStripButton();
+            toolList = new ToolStripButton();
             toolStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // toolStrip1
             // 
             toolStrip1.ImageScalingSize = new Size(32, 32);
-            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton1, toolStripButton2, toolStripButton3, toolStripButton4, toolStripButton5, toolStripButton6 });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { toolNuevo, toolEditar, toolGrabar, toolCancelar, toolEliminar, toolList });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(606, 39);
             toolStrip1.TabIndex = 0;
             toolStrip1.Text = "toolStrip1";
             // 
-            // toolStripButton1
+            // toolNuevo
             // 
-            toolStripButton1.Image = Properties.Resources.nuevo;
-            toolStripButton1.ImageTransparentColor = Color.Magenta;
-            toolStripButton1.Name = "toolStripButton1";
-            toolStripButton1.Size = new Size(78, 36);
-            toolStripButton1.Text = "&Nuevo";
+            toolNuevo.Image = Properties.Resources.nuevo;
+            toolNuevo.ImageTransparentColor = Color.Magenta;
+            toolNuevo.Name = "toolNuevo";
+            toolNuevo.Size = new Size(78, 36);
+            toolNuevo.Text = "&Nuevo";
             // 
-            // toolStripButton2
+            // toolEditar
             // 
-            toolStripButton2.Image = Properties.Resources.Editar;
-            toolStripButton2.ImageTransparentColor = Color.Magenta;
-            toolStripButton2.Name = "toolStripButton2";
-            toolStripButton2.Size = new Size(73, 36);
-            toolStripButton2.Text = "&Editar";
+            toolEditar.Image = Properties.Resources.Editar;
+            toolEditar.ImageTransparentColor = Color.Magenta;
+            toolEditar.Name = "toolEditar";
+            toolEditar.Size = new Size(73, 36);
+            toolEditar.Text = "&Editar";
             // 
-            // toolStripButton3
+            // toolGrabar
             // 
-            toolStripButton3.Image = Properties.Resources.guardar;
-            toolStripButton3.ImageTransparentColor = Color.Magenta;
-            toolStripButton3.Name = "toolStripButton3";
-            toolStripButton3.Size = new Size(85, 36);
-            toolStripButton3.Text = "&Guardar";
+            toolGrabar.Image = Properties.Resources.guardar;
+            toolGrabar.ImageTransparentColor = Color.Magenta;
+            toolGrabar.Name = "toolGrabar";
+            toolGrabar.Size = new Size(85, 36);
+            toolGrabar.Text = "&Guardar";
             // 
-            // toolStripButton4
+            // toolCancelar
             // 
-            toolStripButton4.Image = Properties.Resources.cancelar;
-            toolStripButton4.ImageTransparentColor = Color.Magenta;
-            toolStripButton4.Name = "toolStripButton4";
-            toolStripButton4.Size = new Size(89, 36);
-            toolStripButton4.Text = "&Cancelar";
+            toolCancelar.Image = Properties.Resources.cancelar;
+            toolCancelar.ImageTransparentColor = Color.Magenta;
+            toolCancelar.Name = "toolCancelar";
+            toolCancelar.Size = new Size(89, 36);
+            toolCancelar.Text = "&Cancelar";
             // 
-            // toolStripButton5
+            // toolEliminar
             // 
-            toolStripButton5.Image = Properties.Resources.eliminar;
-            toolStripButton5.ImageTransparentColor = Color.Magenta;
-            toolStripButton5.Name = "toolStripButton5";
-            toolStripButton5.Size = new Size(86, 36);
-            toolStripButton5.Text = "&Eliminar";
+            toolEliminar.Image = Properties.Resources.eliminar;
+            toolEliminar.ImageTransparentColor = Color.Magenta;
+            toolEliminar.Name = "toolEliminar";
+            toolEliminar.Size = new Size(86, 36);
+            toolEliminar.Text = "&Eliminar";
             // 
-            // toolStripButton6
+            // toolList
             // 
-            toolStripButton6.Image = Properties.Resources.refrescar;
-            toolStripButton6.ImageTransparentColor = Color.Magenta;
-            toolStripButton6.Name = "toolStripButton6";
-            toolStripButton6.Size = new Size(122, 36);
-            toolStripButton6.Text = "&Volver a Cargar";
+            toolList.Image = Properties.Resources.refrescar;
+            toolList.ImageTransparentColor = Color.Magenta;
+            toolList.Name = "toolList";
+            toolList.Size = new Size(122, 36);
+            toolList.Text = "&Volver a Cargar";
             // 
             // PlantillaCrud
             // 
@@ -112,11 +112,11 @@
 
         #endregion
         protected ToolStrip toolStrip1;
-        protected ToolStripButton toolStripButton1;
-        protected ToolStripButton toolStripButton2;
-        protected ToolStripButton toolStripButton3;
-        protected ToolStripButton toolStripButton4;
-        protected ToolStripButton toolStripButton5;
-        protected ToolStripButton toolStripButton6;
+        protected ToolStripButton toolNuevo;
+        protected ToolStripButton toolEditar;
+        protected ToolStripButton toolGrabar;
+        protected ToolStripButton toolCancelar;
+        protected ToolStripButton toolEliminar;
+        protected ToolStripButton toolList;
     }
 }

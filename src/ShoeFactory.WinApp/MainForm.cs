@@ -7,22 +7,23 @@ namespace ShoeFactory.WinApp
         public MainForm()
         {
             InitializeComponent();
+            categoriasToolStripMenuItem.Click += CallMaestroCrud;
+            monedasToolStripMenuItem.Click += CallMaestroCrud;
+            tiposDeDocumentoToolStripMenuItem.Click += CallMaestroCrud;
+            cuerosToolStripMenuItem.Click += CallMaestroCrud;
+            modelosToolStripMenuItem.Click += CallMaestroCrud;
+            tiposDeMovimientoToolStripMenuItem.Click += CallMaestroCrud;
+            tiposDePagoToolStripMenuItem.Click += CallMaestroCrud;
+            codigosDeSeccionToolStripMenuItem.Click += CallMaestroCrud;
         }
 
-        private void cuerosToolStripMenuItem_Click(object sender, EventArgs e)
+        private void CallMaestroCrud(object? sender, EventArgs _)
         {
-            using (var frm = new FrmCrudCueros())
-            {
-                frm.ShowDialog();
-            }
-        }
-
-        private void monedasToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            using (var frm = new FrmCrudCurrencies())
-            {
-                frm.ShowDialog();
-            }
+            using var frm = new FrmCrudMaestro();
+            var menuItem = (ToolStripMenuItem)sender!;
+            frm.Endpoint = menuItem.Tag.ToString() ?? string.Empty;
+            frm.Text = menuItem.Text ?? string.Empty;
+            frm.ShowDialog();
         }
     }
 }

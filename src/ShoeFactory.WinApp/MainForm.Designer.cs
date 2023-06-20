@@ -31,15 +31,15 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             menuStrip1 = new MenuStrip();
             datosMaestrosToolStripMenuItem = new ToolStripMenuItem();
+            monedasToolStripMenuItem = new ToolStripMenuItem();
+            categoriasToolStripMenuItem = new ToolStripMenuItem();
             tiposDeMovimientoToolStripMenuItem = new ToolStripMenuItem();
             cuerosToolStripMenuItem = new ToolStripMenuItem();
-            monedasToolStripMenuItem = new ToolStripMenuItem();
             modelosToolStripMenuItem = new ToolStripMenuItem();
             tiposDeDocumentoToolStripMenuItem = new ToolStripMenuItem();
             tiposDePagoToolStripMenuItem = new ToolStripMenuItem();
-            categoriasToolStripMenuItem = new ToolStripMenuItem();
-            productosToolStripMenuItem = new ToolStripMenuItem();
             codigosDeSeccionToolStripMenuItem = new ToolStripMenuItem();
+            productosToolStripMenuItem = new ToolStripMenuItem();
             procesosToolStripMenuItem = new ToolStripMenuItem();
             controlDeProduccionToolStripMenuItem = new ToolStripMenuItem();
             ayudaToolStripMenuItem = new ToolStripMenuItem();
@@ -63,66 +63,72 @@
             // 
             // datosMaestrosToolStripMenuItem
             // 
-            datosMaestrosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { tiposDeMovimientoToolStripMenuItem, cuerosToolStripMenuItem, monedasToolStripMenuItem, modelosToolStripMenuItem, tiposDeDocumentoToolStripMenuItem, tiposDePagoToolStripMenuItem, categoriasToolStripMenuItem, productosToolStripMenuItem, codigosDeSeccionToolStripMenuItem });
+            datosMaestrosToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { monedasToolStripMenuItem, categoriasToolStripMenuItem, tiposDeMovimientoToolStripMenuItem, cuerosToolStripMenuItem, modelosToolStripMenuItem, tiposDeDocumentoToolStripMenuItem, tiposDePagoToolStripMenuItem, codigosDeSeccionToolStripMenuItem, productosToolStripMenuItem });
             datosMaestrosToolStripMenuItem.Name = "datosMaestrosToolStripMenuItem";
             datosMaestrosToolStripMenuItem.Size = new Size(100, 20);
             datosMaestrosToolStripMenuItem.Text = "Datos Maestros";
+            // 
+            // monedasToolStripMenuItem
+            // 
+            monedasToolStripMenuItem.Name = "monedasToolStripMenuItem";
+            monedasToolStripMenuItem.Size = new Size(186, 22);
+            monedasToolStripMenuItem.Tag = "Currencies";
+            monedasToolStripMenuItem.Text = "Monedas";
+            // 
+            // categoriasToolStripMenuItem
+            // 
+            categoriasToolStripMenuItem.Name = "categoriasToolStripMenuItem";
+            categoriasToolStripMenuItem.Size = new Size(186, 22);
+            categoriasToolStripMenuItem.Tag = "Categories";
+            categoriasToolStripMenuItem.Text = "Categorias";
             // 
             // tiposDeMovimientoToolStripMenuItem
             // 
             tiposDeMovimientoToolStripMenuItem.Name = "tiposDeMovimientoToolStripMenuItem";
             tiposDeMovimientoToolStripMenuItem.Size = new Size(186, 22);
+            tiposDeMovimientoToolStripMenuItem.Tag = "Movements";
             tiposDeMovimientoToolStripMenuItem.Text = "Tipos de Movimiento";
             // 
             // cuerosToolStripMenuItem
             // 
             cuerosToolStripMenuItem.Name = "cuerosToolStripMenuItem";
             cuerosToolStripMenuItem.Size = new Size(186, 22);
+            cuerosToolStripMenuItem.Tag = "Leathers";
             cuerosToolStripMenuItem.Text = "Cueros";
-            cuerosToolStripMenuItem.Click += cuerosToolStripMenuItem_Click;
-            // 
-            // monedasToolStripMenuItem
-            // 
-            monedasToolStripMenuItem.Name = "monedasToolStripMenuItem";
-            monedasToolStripMenuItem.Size = new Size(186, 22);
-            monedasToolStripMenuItem.Text = "Monedas";
-            monedasToolStripMenuItem.Click += monedasToolStripMenuItem_Click;
             // 
             // modelosToolStripMenuItem
             // 
             modelosToolStripMenuItem.Name = "modelosToolStripMenuItem";
             modelosToolStripMenuItem.Size = new Size(186, 22);
+            modelosToolStripMenuItem.Tag = "Models";
             modelosToolStripMenuItem.Text = "Modelos";
             // 
             // tiposDeDocumentoToolStripMenuItem
             // 
             tiposDeDocumentoToolStripMenuItem.Name = "tiposDeDocumentoToolStripMenuItem";
             tiposDeDocumentoToolStripMenuItem.Size = new Size(186, 22);
+            tiposDeDocumentoToolStripMenuItem.Tag = "DocumentTypes";
             tiposDeDocumentoToolStripMenuItem.Text = "Tipos de Documento";
             // 
             // tiposDePagoToolStripMenuItem
             // 
             tiposDePagoToolStripMenuItem.Name = "tiposDePagoToolStripMenuItem";
             tiposDePagoToolStripMenuItem.Size = new Size(186, 22);
+            tiposDePagoToolStripMenuItem.Tag = "PaymentTypes";
             tiposDePagoToolStripMenuItem.Text = "Tipos de Pago";
-            // 
-            // categoriasToolStripMenuItem
-            // 
-            categoriasToolStripMenuItem.Name = "categoriasToolStripMenuItem";
-            categoriasToolStripMenuItem.Size = new Size(186, 22);
-            categoriasToolStripMenuItem.Text = "Categorias";
-            // 
-            // productosToolStripMenuItem
-            // 
-            productosToolStripMenuItem.Name = "productosToolStripMenuItem";
-            productosToolStripMenuItem.Size = new Size(186, 22);
-            productosToolStripMenuItem.Text = "Productos";
             // 
             // codigosDeSeccionToolStripMenuItem
             // 
             codigosDeSeccionToolStripMenuItem.Name = "codigosDeSeccionToolStripMenuItem";
             codigosDeSeccionToolStripMenuItem.Size = new Size(186, 22);
+            codigosDeSeccionToolStripMenuItem.Tag = "SectionCodes";
             codigosDeSeccionToolStripMenuItem.Text = "Codigos de Seccion";
+            // 
+            // productosToolStripMenuItem
+            // 
+            productosToolStripMenuItem.Name = "productosToolStripMenuItem";
+            productosToolStripMenuItem.Size = new Size(186, 22);
+            productosToolStripMenuItem.Text = "Articulos";
             // 
             // procesosToolStripMenuItem
             // 
