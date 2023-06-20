@@ -26,7 +26,7 @@ builder.Services.AddSwaggerGen();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+//if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
@@ -37,5 +37,11 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+// Create a scope to migrate automatically
+using (var scope = app.Services.CreateScope())
+{
+    await scope.ServiceProvider.GetService<ShoeFactoryDbContext>()?.Database.MigrateAsync()!;
+}
 
 app.Run();
